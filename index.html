@@ -50,10 +50,10 @@
     
     <py-script> 
 
-
+    import urllib.request
     
 
-   async def my_function(a): 
+     def my_function(a): 
         
         import urllib.request
 
@@ -87,17 +87,12 @@
         PriceStep=Element("myText9").element.value 
         console.log(PriceStep)
 
-        # set the API endpoint URL
-        url = "http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IRESS&svr=&pw="
+        url = 'http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IRESS&svr=&pw=pMafjqTeSjnxSQgJY2Zg'
 
-        # make an HTTP GET request to the API endpoint
-        response = urllib.request.urlopen(url)
+        with urllib.request.urlopen(url) as response:
+        html = response.read()
 
-        # read the response from the API
-        data = await response.read()
-
-        # print the response from the API
-        print(data)
+        console.log(html)
 
 
 
