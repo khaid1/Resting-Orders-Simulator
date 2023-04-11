@@ -53,7 +53,7 @@
 
     
 
-    def my_function(a): 
+   async def my_function(a): 
         
         import urllib.request
 
@@ -94,7 +94,7 @@
         response = urllib.request.urlopen(url)
 
         # read the response from the API
-        data = response.read()
+        data = await response.read()
 
         # print the response from the API
         print(data)
