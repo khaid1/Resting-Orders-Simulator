@@ -54,6 +54,8 @@
     
 
     def my_function(a): 
+        
+        import urllib.request
 
         Account=Element("myText1").element.value 
         console.log(Account)
@@ -84,8 +86,6 @@
 
         PriceStep=Element("myText9").element.value 
         console.log(PriceStep)
-
-        import urllib.request
 
         # set the API endpoint URL
         url = "http://127.0.0.1:51234/wsdl.aspx?un=admin&cp=iress&svc=IRESS&svr=&pw="
